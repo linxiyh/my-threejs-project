@@ -1,3 +1,4 @@
+import * as THREE from 'three';
 import GUI from 'lil-gui';
 
 // 游戏状态枚举
@@ -121,7 +122,7 @@ function handleWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-// 创建场景、相机和渲染器（保持不变）
+// 创建场景、相机和渲染器
 function createScene() {
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -615,20 +616,20 @@ function updateCamera() {
 }
 
 // 调试：输出位置信息（保持不变）
-function logPositions() {
-  console.log('主蛇头位置:', {
-    x: sphere.position.x.toFixed(2),
-    y: sphere.position.y.toFixed(2),
-    z: sphere.position.z.toFixed(2)
-  });
-  console.log('NPC蛇头位置:', {
-    x: npcHead.position.x.toFixed(2),
-    y: npcHead.position.y.toFixed(2),
-    z: npcHead.position.z.toFixed(2)
-  });
-  const distance = sphere.position.distanceTo(npcHead.position);
-  console.log('主蛇与NPC距离:', distance.toFixed(2));
-}
+//function logPositions() {
+  //console.log('主蛇头位置:', {
+    //x: sphere.position.x.toFixed(2),
+    //y: sphere.position.y.toFixed(2),
+    //z: sphere.position.z.toFixed(2)
+  //});
+  //console.log('NPC蛇头位置:', {
+    //x: npcHead.position.x.toFixed(2),
+    //y: npcHead.position.y.toFixed(2),
+    //z: npcHead.position.z.toFixed(2)
+  //});
+  //const distance = sphere.position.distanceTo(npcHead.position);
+  //console.log('主蛇与NPC距离:', distance.toFixed(2));
+//}
 
 // 检测蛇的碰撞（保持不变）
 function checkSnakeCollisions() {
