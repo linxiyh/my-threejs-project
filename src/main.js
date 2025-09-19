@@ -283,7 +283,7 @@ function initPositionHistory(targetObj, forceClear = false) {
 function addGround() {
   const planeGeometry = new THREE.PlaneGeometry(500, 500);
   const myTexture = textureLoader.load(
-'贪吃蛇平面.png', // 图 片 路 径
+'/src/贪吃蛇平面.png', // 图 片 路 径
 () => { console.log('纹 理 加 载 完 成 ！'); }
 );
 
